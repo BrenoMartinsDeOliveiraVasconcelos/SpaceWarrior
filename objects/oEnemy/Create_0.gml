@@ -1,9 +1,10 @@
 hp = 20
-frames_per_blast = 120
+frames_per_blast = 120 - ((global.horde-1) * 10)
 blast_damage = 10
 last_blast = frames_per_blast
-move_speed = 0.5
+move_speed = 1
 og_move_speed = move_speed
-distance_from_player = 100
+distance_from_player = 20
 impacted = false
 impacted_walk_dist = 0
+prefered_extra_blast_distance = irandom_range(0, 500)

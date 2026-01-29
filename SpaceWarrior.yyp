@@ -49,6 +49,7 @@
     {"id":{"name":"sEnemy","path":"sprites/sEnemy/sEnemy.yy",},},
     {"id":{"name":"sExplosive","path":"sprites/sExplosive/sExplosive.yy",},},
     {"id":{"name":"sHealthBoost","path":"sprites/sHealthBoost/sHealthBoost.yy",},},
+    {"id":{"name":"sMaxHP","path":"sprites/sMaxHP/sMaxHP.yy",},},
     {"id":{"name":"sStar","path":"sprites/sStar/sStar.yy",},},
     {"id":{"name":"sWarrior","path":"sprites/sWarrior/sWarrior.yy",},},
   ],

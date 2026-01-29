@@ -1,6 +1,6 @@
 
-global.target_w = 500
-global.target_h = 500
+global.target_w = 750
+global.target_h = 750
 global.is_fullscreen =  false
 global.player_spawn_y_percent = 85
 global.player_spawn_x_percent = 50
@@ -9,7 +9,7 @@ global.game_y = 10
 global.lx_spacing = 100
 global.cy_spacing = 30
 global.number_zeroes = 9
-global.bonuses = [sDef, sHealthBoost, sAddExplosive, sBlastSpeed]
+global.bonuses = [sDef, sHealthBoost, sAddExplosive, sBlastSpeed, sMaxHP]
 
 
 global.star_amount =  64

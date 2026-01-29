@@ -1,5 +1,5 @@
 if (sprite_index == sDef){
-	other.def += (other.def*0.25)
+	other.def += (other.def*0.5)
 	
 	if (other.def > 0.9){
 		other.def = 0.9
@@ -25,6 +25,11 @@ if (sprite_index == sAddExplosive){
 
 if (sprite_index == sBlastSpeed){
 	other.frames_per_blast -= round(other.frames_per_blast * 0.1)
+	other.blast_damage += other.blast_damage*0.1
+}
+
+if (sprite_index == sMaxHP){
+	other.hp_max += (other.hp_max*0.1)
 }
 
 instance_destroy(self)
