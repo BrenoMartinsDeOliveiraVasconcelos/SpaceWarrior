@@ -1,13 +1,15 @@
-global.resolution_multiplier = 1.5
 
-global.target_w = room_width * global.resolution_multiplier
-global.target_h = room_height * global.resolution_multiplier
+global.target_w = 500
+global.target_h = 500
 global.is_fullscreen =  false
 global.player_spawn_y_percent = 85
 global.player_spawn_x_percent = 50
+global.game_x = 10
 global.game_y = 10
 global.lx_spacing = 100
+global.cy_spacing = 30
 global.number_zeroes = 9
+global.bonuses = [sDef]
 
 
 global.star_amount =  64
@@ -18,13 +20,18 @@ global.enemy_spawn = 1
 global.enemy_instances = []
 global.new_horde = true
 global.enemy_kill_count = 0
-global.spawn_multiplication_rate = 2
+global.spawn_multiplication_rate = 1.5
 global.enemy_max_y = 75
+global.frames_till_next = 1200
+global.frames_remaining_next = 0
+global.horde = 0
 
 // Keys
 global.fullscreen_key = vk_f11
 global.mov_left = ord("A")
 global.mov_right = ord("D")
+global.mov_up = ord("W")
+global.mov_down = ord("S")
 global.blast_key = vk_enter
 
 // Preparation

@@ -1,13 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"objWarrior",
+  "%Name":"oBlastE",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oBlastE","path":"objects/oBlastE/oBlastE.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"objWarrior",
+  "name":"oBlastE",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sWarrior",
-    "path":"sprites/sWarrior/sWarrior.yy",
+    "name":"sBlasttE",
+    "path":"sprites/sBlasttE/sBlasttE.yy",
   },
   "spriteMaskId":null,
   "visible":true,

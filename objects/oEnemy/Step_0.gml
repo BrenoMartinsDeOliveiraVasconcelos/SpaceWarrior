@@ -18,3 +18,12 @@ if (euclidian_distance(x, y, target_x, target_y) > 0){
 }else{
 	speed = 0
 }
+
+if (last_blast > frames_per_blast){
+	instnace = instance_create_layer(x, y-(sprite_height/2), "Instances", oBlastE)
+	last_blast = 0
+	instnace.damage = blast_damage
+}
+
+
+last_blast += 1
