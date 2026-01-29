@@ -9,7 +9,7 @@ global.game_y = 10
 global.lx_spacing = 100
 global.cy_spacing = 30
 global.number_zeroes = 9
-global.bonuses = [sDef]
+global.bonuses = [sDef, sHealthBoost, sAddExplosive, sBlastSpeed]
 
 
 global.star_amount =  64
@@ -20,10 +20,12 @@ global.enemy_spawn = 1
 global.enemy_instances = []
 global.new_horde = true
 global.enemy_kill_count = 0
-global.spawn_multiplication_rate = 1.5
+global.spawn_multiplication_rate = 1.25
 global.enemy_max_y = 75
 global.frames_till_next = 1200
 global.frames_remaining_next = 0
+global.orbs = 2
+global.orb_spawn_range = 100
 global.horde = 0
 
 // Keys

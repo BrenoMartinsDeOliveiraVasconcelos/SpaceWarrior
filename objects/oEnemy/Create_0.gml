@@ -1,6 +1,6 @@
 hp = 20
-frames_per_blast = 60
-blast_damage = 1
+frames_per_blast = 120
+blast_damage = 10
 last_blast = frames_per_blast
 move_speed = 0.5
 og_move_speed = move_speed

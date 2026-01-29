@@ -22,7 +22,36 @@ if (keyboard_check_pressed(global.fullscreen_key)){
 	}
 	
 	// Bonus orb on random point
-	instance_create_layer(irandom_range(0, room_width), irandom_range(0, room_height), "Instances", oOrb)
+	for (var orb=0; orb < global.orbs; orb+=1){
+		var spawn_x = irandom_range(global.player.x-global.orb_spawn_range, global.player.x+global.orb_spawn_range)
+		var spawn_y = irandom_range(global.player.y-global.orb_spawn_range, global.player.y+global.orb_spawn_range)
+		
+		if (spawn_x < 0){
+			spawn_x = 0
+		}
+		
+		if (spawn_x > room_width){
+			spawn_x = room_width
+		}
+		
+		if (spawn_y < 0){
+			spawn_y = 0
+		}
+		
+		if (spawn_y > room_height){
+			spawn_y = room_height
+		}
+		
+		instance_create_layer(spawn_x, spawn_y, "Instances", oOrb)
+	}
+	
+	
+	// Spawn explosives
+	if (global.player.explosives > 0){
+		for (var explosive=0; explosive<global.player.explosives; explosive+=1){
+			instance_create_layer(global.player.x, global.player.y, "Instances", oExplosive)
+		}
+	}
 	
 	global.new_horde = false
  }else if (global.new_horde){

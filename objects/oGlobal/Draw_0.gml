@@ -18,7 +18,7 @@ draw_text(first_x, first_y, string(global.player.def*100))
 first_y += global.cy_spacing
 first_x = global.game_x
 
-draw_text(first_x, first_y, string(global.frames_remaining_next))
+draw_text(first_x, first_y, string(global.player.explosives))
 
 if (global.player.hp <= 0){
 
