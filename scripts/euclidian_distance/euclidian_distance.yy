@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"euclidian_distance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"euclidian_distance",
+  "parent":{
+    "name":"Functions",
+    "path":"folders/Functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gen_random_coords_distanced",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gen_random_coords_distanced",
+  "parent":{
+    "name":"Functions",
+    "path":"folders/Functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

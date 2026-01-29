@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_rounded_percent",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_rounded_percent",
+  "parent":{
+    "name":"Functions",
+    "path":"folders/Functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

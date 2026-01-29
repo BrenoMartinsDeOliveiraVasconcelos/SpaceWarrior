@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"zfilled_number",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"zfilled_number",
+  "parent":{
+    "name":"Functions",
+    "path":"folders/Functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
