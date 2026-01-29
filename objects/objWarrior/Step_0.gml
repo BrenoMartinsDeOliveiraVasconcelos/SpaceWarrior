@@ -7,9 +7,10 @@ if (keyboard_check(global.mov_right)){
 }
 
 
-if (keyboard_check_pressed(global.blast_key)){
+if (keyboard_check(global.blast_key)){
 	if (last_blast > frames_per_blast){
 		instance_create_layer(x, y-(sprite_height/2), "Instances", oBlast)
+		last_blast = 0
 	}
 }
 

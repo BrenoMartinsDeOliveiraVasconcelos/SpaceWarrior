@@ -1,6 +1,8 @@
 var destruct_list = [other]
 
 hp -= global.player.blast_damage
+impacted = true
+global.player.gamescore += 12
 
 if (hp<=0){
 	global.enemy_kill_count += 1
