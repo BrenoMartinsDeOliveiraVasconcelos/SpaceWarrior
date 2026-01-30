@@ -1,6 +1,6 @@
 
 
-if (euclidian_distance(x, y, target_x, target_y) > 0){
+if (euclidian_distance(x, y, target_x, target_y) > 5){
 	speed = move_speed
 	var final_target_y = target_y
 	

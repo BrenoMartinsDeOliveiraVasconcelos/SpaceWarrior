@@ -7,10 +7,8 @@ full_text = ""
 first_x = global.game_x
 first_y = global.game_y
 
-display = instance_create_layer(0, 0, "Globals", oDisplay)
-
 if (global.show_fps){
-	full_text+= "F"+string(fps) + " "
+	full_text+= "F"+string(fps) + " - " + string(fps_real) + " "
 }
 
 full_text += "S"+zfilled_number(global.number_zeroes , global.player.gamescore) + " "

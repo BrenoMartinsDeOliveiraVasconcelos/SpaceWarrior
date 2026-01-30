@@ -49,6 +49,7 @@ randomise()
 
 window_set_size(global.target_w, global.target_h)
 window_set_fullscreen(global.is_fullscreen)
+display = instance_create_layer(0, 0, "Globals", oDisplay)
 
 global.player = instance_create_layer(get_rounded_percent(room_width, global.player_spawn_x_percent), get_rounded_percent(room_height, global.player_spawn_y_percent), "Instances", objWarrior)
 

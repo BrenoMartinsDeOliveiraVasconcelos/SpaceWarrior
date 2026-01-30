@@ -45,8 +45,8 @@ if (y > room_height){
 	y = room_height
 }
 
-if (y < 0){
-	y = 0
+if (y < global.dialog_y_size){
+	y = global.dialog_y_size
 }
 
 

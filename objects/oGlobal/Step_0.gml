@@ -18,7 +18,7 @@ if (keyboard_check(global.toggle_fps_key)){
 	global.enemy_instances = []
 	global.enemy_kill_count = 0
 	global.enemy_spawn = global.enemy_spawn*global.spawn_multiplication_rate
-	var enemy_coords = gen_random_coords_distanced(global.enemy_spawn, global.enemy_distancing, room_width, get_rounded_percent(room_height, global.enemy_spawn_y_percent))
+	var enemy_coords = gen_random_coords_distanced(global.enemy_spawn, global.enemy_distancing, room_width, get_rounded_percent(room_height, global.enemy_spawn_y_percent), 0, global.dialog_y_size)
 	for (var enemy=0; enemy < round( global.enemy_spawn); enemy+=1){
 		var spawn_x = irandom_range(0, room_width)
 		var spawn_y = global.dialog_y_size
@@ -64,9 +64,7 @@ if (keyboard_check(global.toggle_fps_key)){
 			instance_destroy(array_pop(global.explosives))
 			len_explosives = array_length(global.explosives)
 			
-			show_debug_message(string(len_explosives))
 		}
-		global.explosives = []
 	}
 	
 	if (global.player.explosives > 0){
