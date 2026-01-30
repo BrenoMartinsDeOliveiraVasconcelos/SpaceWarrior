@@ -1,4 +1,4 @@
-
+global.show_fps = false
 global.target_w = 750
 global.target_h = 750
 global.is_fullscreen =  false
@@ -38,6 +38,7 @@ global.mov_right = ord("D")
 global.mov_up = ord("W")
 global.mov_down = ord("S")
 global.blast_key = vk_enter
+global.toggle_fps_key = vk_f3
 
 // Preparation
 randomise()

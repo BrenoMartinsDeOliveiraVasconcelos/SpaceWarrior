@@ -5,6 +5,10 @@ if (keyboard_check_pressed(global.fullscreen_key)){
 	window_set_fullscreen(global.is_fullscreen)
 }
 
+if (keyboard_check(global.toggle_fps_key)){
+	global.show_fps = !global.show_fps
+}
+
 
  // Enemy spawning
 
