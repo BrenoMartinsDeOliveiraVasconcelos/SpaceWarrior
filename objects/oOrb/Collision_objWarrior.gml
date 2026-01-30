@@ -7,8 +7,7 @@ if (sprite_index == sDef){
 }
 
 if (sprite_index == sHealthBoost){
-	other.frames_per_recover -= round(other.frames_per_recover * 0.25)
-	other.hp_recover_rate -= (other.hp_recover_rate * 0.10)
+	other.frames_per_recover -= other.frames_per_recover * 0.30
 	
 	if (other.frames_per_recover < 5){
 		other.frames_per_recover = 5
@@ -24,7 +23,7 @@ if (sprite_index == sAddExplosive){
 }
 
 if (sprite_index == sBlastSpeed){
-	other.frames_per_blast -= round(other.frames_per_blast * 0.1)
+	other.frames_per_blast -= other.frames_per_blast * 0.1
 	other.blast_damage += other.blast_damage*0.25
 }
 

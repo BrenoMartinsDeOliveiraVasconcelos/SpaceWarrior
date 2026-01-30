@@ -1,6 +1,11 @@
-hp = 20
-frames_per_blast = 120 - ((global.horde-1) * 10)
-blast_damage = 10
+hp = 20+((global.horde-1)*2)
+frames_per_blast = 120 - ((global.horde-1) * 4)
+
+if (frames_per_blast <= 15){
+	frames_per_blast = 15
+}
+
+blast_damage = 10 + ((global.horde-1)*2)
 og_blast_damage = blast_damage
 last_blast = frames_per_blast
 move_speed = 1

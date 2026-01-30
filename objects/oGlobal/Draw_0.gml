@@ -1,4 +1,4 @@
-font = font_add_sprite_ext(fGamefont, "0123456789. -SHDAF", 0, global.text_sep)
+font = font_add_sprite_ext(fGamefont, "0123456789. -SHDAFEXR/", 0, global.text_sep)
 gofont = font_add_sprite_ext(fGameOver, ".", 0, 2)
 draw_set_font(font)
 
@@ -21,7 +21,15 @@ if (global.player.hp > 0){
 
 full_text += "H"+string(player_hp) + " "
 
-full_text += "D"+string(round((global.player.def/global.max_def)*100)) + " " + "A"+string(global.player.blast_damage)
+full_text += "D"+string(round((global.player.def/global.max_def)*100)) + " " 
+
+full_text += "A"+string(global.player.blast_damage) + " "
+full_text += "E" + string(global.enemy_kill_count)+ "/" + string(array_length(global.enemy_instances)) + " "
+full_text += "X" + string(array_length(global.explosives)) + " "
+full_text += "R" +string(global.horde)
+
+
+
 
 draw_text(first_x, first_y, full_text)
 

@@ -1,4 +1,4 @@
-mov_speed = 3  // quantity per frame
+mov_speed = 4  // quantity per frame
 frames_per_blast = 15
 last_blast = frames_per_blast
 

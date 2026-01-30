@@ -16,7 +16,7 @@ global.dialog_size = 16
 global.dialog_scalex = 31.25
 global.dialog_scaley = 2
 global.dialog_y_size = global.dialog_scaley*global.dialog_size
-global.max_def = 0.9
+global.max_def = 0.99
 
 global.star_amount =  64
 global.star_distance = 8
@@ -27,7 +27,7 @@ global.enemy_instances = []
 global.explosives = []
 global.new_horde = true
 global.enemy_kill_count = 0
-global.spawn_multiplication_rate = 1.25
+global.spawn_multiplication_rate = 1.5
 global.enemy_max_y = 75
 global.frames_till_next = 1200
 global.frames_remaining_next = 0
