@@ -4,6 +4,7 @@ global.target_h = 750
 global.is_fullscreen =  false
 global.player_spawn_y_percent = 85
 global.player_spawn_x_percent = 50
+global.enemy_spawn_y_percent = 60
 global.game_x = 10
 global.game_y = 10
 global.lx_spacing = 100
@@ -18,6 +19,7 @@ global.star_distance = 8
 // Game info
 global.enemy_spawn = 1
 global.enemy_instances = []
+global.explosives = []
 global.new_horde = true
 global.enemy_kill_count = 0
 global.spawn_multiplication_rate = 1.25
@@ -27,6 +29,7 @@ global.frames_remaining_next = 0
 global.orbs = 2
 global.orb_spawn_range = 100
 global.horde = 0
+global.enemy_distancing = 40
 
 // Keys
 global.fullscreen_key = vk_f11

@@ -1,26 +1,29 @@
-
+// Old AI
+/*
 target_x = global.player.x
 target_y = global.player.y - (distance_from_player + prefered_extra_blast_distance)
 
 if (target_y < 0){
 	target_y = 10
 }
+*/
 
 if (euclidian_distance(x, y, target_x, target_y) > 0){
 	speed = move_speed
+	var final_target_y = target_y
 	
 	if  (impacted){
-		frames_per_blast *= 2
+		blast_damage *= impact_debuff
 		speed = global.player.impacted_speed
-		target_y = y - (global.player.impact - impacted_walk_dist)
+		final_target_y = y - (global.player.impact - impacted_walk_dist)
 		impacted_walk_dist += global.player.impacted_speed
 	}
-	move_towards_point(target_x, target_y, speed)
+	move_towards_point(target_x, final_target_y, speed)
 	
 	if (impacted_walk_dist >= global.player.impact){
 		impacted = false
-		frames_per_blast /= 2
 		impacted_walk_dist = 0
+		blast_damage = og_blast_damage
 	}
 }else{
 	speed = 0
