@@ -11,7 +11,11 @@ global.lx_spacing = 100
 global.cy_spacing = 30
 global.number_zeroes = 9
 global.bonuses = [sDef, sHealthBoost, sAddExplosive, sBlastSpeed, sMaxHP]
-
+global.text_sep = 2
+global.dialog_size = 16
+global.dialog_scalex = 31.25
+global.dialog_scaley = 2
+global.dialog_y_size = global.dialog_scaley*global.dialog_size
 
 global.star_amount =  64
 global.star_distance = 8

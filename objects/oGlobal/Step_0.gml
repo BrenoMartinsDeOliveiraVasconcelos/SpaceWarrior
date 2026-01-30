@@ -21,7 +21,7 @@ if (keyboard_check(global.toggle_fps_key)){
 	var enemy_coords = gen_random_coords_distanced(global.enemy_spawn, global.enemy_distancing, room_width, get_rounded_percent(room_height, global.enemy_spawn_y_percent))
 	for (var enemy=0; enemy < round( global.enemy_spawn); enemy+=1){
 		var spawn_x = irandom_range(0, room_width)
-		var spawn_y = 0
+		var spawn_y = global.dialog_y_size
 		var enemy_inst =  instance_create_layer(spawn_x, spawn_y, "Instances", oEnemy)
 		
 		var enemy_xy =  enemy_coords[enemy]
@@ -45,8 +45,8 @@ if (keyboard_check(global.toggle_fps_key)){
 			spawn_x = room_width
 		}
 		
-		if (spawn_y < 0){
-			spawn_y = 0
+		if (spawn_y < global.dialog_y_size){
+			spawn_y = global.dialog_y_size
 		}
 		
 		if (spawn_y > room_height){
