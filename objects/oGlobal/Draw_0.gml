@@ -8,7 +8,7 @@ first_x = global.game_x
 first_y = global.game_y
 
 if (global.show_fps){
-	full_text+= "F"+string(fps) + " - " + string(fps_real) + " "
+	full_text+= "F"+string(fps) + " "
 }
 
 full_text += "S"+zfilled_number(global.number_zeroes , global.player.gamescore) + " "
@@ -21,7 +21,7 @@ if (global.player.hp > 0){
 
 full_text += "H"+string(player_hp) + " "
 
-full_text += "D"+string(global.player.def*100) + " " + "A"+string(global.player.blast_damage)
+full_text += "D"+string(round((global.player.def/global.max_def)*100)) + " " + "A"+string(global.player.blast_damage)
 
 draw_text(first_x, first_y, full_text)
 

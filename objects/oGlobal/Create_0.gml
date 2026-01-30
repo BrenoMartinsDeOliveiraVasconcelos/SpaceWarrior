@@ -16,6 +16,7 @@ global.dialog_size = 16
 global.dialog_scalex = 31.25
 global.dialog_scaley = 2
 global.dialog_y_size = global.dialog_scaley*global.dialog_size
+global.max_def = 0.9
 
 global.star_amount =  64
 global.star_distance = 8
