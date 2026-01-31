@@ -1,4 +1,4 @@
-font = font_add_sprite_ext(fGamefont, "0123456789. -SHDAFEXR/", 0, global.text_sep)
+font = font_add_sprite_ext(fGamefont, "0123456789. -SHDAFEXR/+", 0, global.text_sep)
 gofont = global.gofont
 draw_set_font(font)
 
@@ -19,7 +19,7 @@ if (global.player.hp > 0){
 	player_hp = round((global.player.hp/global.player.hp_max)*100)
 }
 
-full_text += "H"+string(player_hp) + " "
+full_text += "H"+string(player_hp) + "+" + string((global.player.hp_recover_rate/global.player.hp_max)*100) + " "
 
 full_text += "D"+string(round((global.player.def/global.max_def)*100)) + " " 
 

@@ -13,13 +13,13 @@ global.number_zeroes = 9
 global.bonuses = [sDef, sHealthBoost, sAddExplosive, sBlastSpeed, sMaxHP, sShieldEnhance]
 global.text_sep = 2
 global.dialog_size = 16
-global.dialog_scalex = 64
+global.dialog_scalex = 48
 global.dialog_scaley = 2
 global.dialog_y_size = global.dialog_scaley*global.dialog_size
 global.max_def = 0.99
 global.gofont = font_add_sprite_ext(fGameOver, ".", 0, 2)
 
-global.star_amount =  256
+global.star_amount =  128
 global.star_distance = 8
 
 // Game info
@@ -28,11 +28,11 @@ global.enemy_instances = []
 global.explosives = []
 global.new_horde = true
 global.enemy_kill_count = 0
-global.spawn_multiplication_rate = 1.5
+global.spawn_multiplication_rate = 1.25
 global.enemy_max_y = 75
 global.frames_till_next = 600
 global.frames_remaining_next = 0
-global.orbs = 2
+global.orbs = 3
 global.orb_spawn_range = 100
 global.horde = 0
 global.enemy_distancing = 10

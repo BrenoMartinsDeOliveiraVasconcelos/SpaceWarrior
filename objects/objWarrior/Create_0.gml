@@ -18,3 +18,5 @@ number_shields = 10
 shield_speed = 1
 shields = []
 shield_pos = 0
+shield_colision_damage = 2
+shield_impulse = 50
