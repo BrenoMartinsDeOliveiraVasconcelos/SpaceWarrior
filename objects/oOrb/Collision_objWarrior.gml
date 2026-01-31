@@ -32,4 +32,8 @@ if (sprite_index == sMaxHP){
 	other.hp = other.hp_max
 }
 
+if (sprite_index == sShieldEnhance){
+	global.player.number_shields += 20
+}
+
 instance_destroy(self)

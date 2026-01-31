@@ -1,6 +1,6 @@
 global.show_fps = false
-global.target_w = 750
-global.target_h = 750
+global.target_w = 1080
+global.target_h = 600
 global.is_fullscreen =  false
 global.player_spawn_y_percent = 85
 global.player_spawn_x_percent = 50
@@ -10,16 +10,16 @@ global.game_y = 10
 global.lx_spacing = 100
 global.cy_spacing = 30
 global.number_zeroes = 9
-global.bonuses = [sDef, sHealthBoost, sAddExplosive, sBlastSpeed, sMaxHP]
+global.bonuses = [sDef, sHealthBoost, sAddExplosive, sBlastSpeed, sMaxHP, sShieldEnhance]
 global.text_sep = 2
 global.dialog_size = 16
-global.dialog_scalex = 31.25
+global.dialog_scalex = 64
 global.dialog_scaley = 2
 global.dialog_y_size = global.dialog_scaley*global.dialog_size
 global.max_def = 0.99
 global.gofont = font_add_sprite_ext(fGameOver, ".", 0, 2)
 
-global.star_amount =  64
+global.star_amount =  256
 global.star_distance = 8
 
 // Game info

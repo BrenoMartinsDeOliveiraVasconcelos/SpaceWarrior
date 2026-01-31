@@ -57,3 +57,18 @@ if (hp <= 0){
 	hp = 0
 	hp_recover_rate = 0
 }
+
+if  (array_length(shields) < number_shields){
+	for (shield_num = 0; shield_num < array_length(shields); shield_num+=1){
+		shields[shield_num].angulation = shield_num
+	}
+	
+	while  (array_length(shields) < number_shields){
+		shield = instance_create_layer(0, 0, "Instances", oShield)
+		shield.angulation = shield_pos
+		shield.orbit_speed = shield_speed
+		array_push(shields, shield)
+	
+		shield_pos += 1
+	}
+}

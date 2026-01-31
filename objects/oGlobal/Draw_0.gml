@@ -29,8 +29,6 @@ full_text += "X" + string(global.alive_explosives) + " "
 full_text += "R" +string(global.horde)
 
 
-
-
 draw_text(first_x, first_y, full_text)
 
 display.image_xscale = global.dialog_scalex
@@ -45,7 +43,7 @@ for (var enemy=0; enemy<array_length(global.enemy_instances); enemy+=1){
 		var hp_text = "0"
 	
 		if (instance.hp > 0){
-			hp_text = string((instance.hp/instance.max_hp)*100)
+			hp_text = string(round((instance.hp/instance.max_hp)*100))
 		}
 	
 		

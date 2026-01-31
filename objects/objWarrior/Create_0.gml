@@ -1,4 +1,4 @@
-mov_speed = 4  // quantity per frame
+mov_speed = 5  // quantity per frame
 frames_per_blast = 15
 last_blast = frames_per_blast
 
@@ -14,3 +14,7 @@ blast_damage = 5
 impact = 250
 impacted_speed = 1
 explosives = 1
+number_shields = 10
+shield_speed = 1
+shields = []
+shield_pos = 0
