@@ -13,6 +13,12 @@ if (keyboard_check(global.toggle_fps_key)){
  // Enemy spawning
 
  if (global.new_horde && global.frames_remaining_next <= 0){
+	 global.random_move_chance = round(global.random_move_chance * 1.25)
+	 
+	 if (global.random_move_chance > 1000){
+		global.random_move_chance = 1000
+	 }
+	 
 	 global.horde += 1
 	 global.frames_remaining_next = global.frames_till_next
 	global.enemy_instances = []
@@ -26,8 +32,14 @@ if (keyboard_check(global.toggle_fps_key)){
 		
 		var enemy_xy =  enemy_coords[enemy]
 		
-		enemy_inst.target_x = enemy_xy[0]
-		enemy_inst.target_y = enemy_xy[1]
+		random_mov = (irandom_range(0, 1000))
+		
+		if (random_mov > global.random_move_chance){
+			enemy_inst.target_x = enemy_xy[0]
+			enemy_inst.target_y = enemy_xy[1]
+		}else{
+			enemy_inst.is_randomly_moving = true
+		}
 	
 		array_push(global.enemy_instances, enemy_inst)
 	}
@@ -67,6 +79,7 @@ if (keyboard_check(global.toggle_fps_key)){
 		}
 	}
 	
+	global.alive_explosives = global.player.explosives
 	if (global.player.explosives > 0){
 		for (var explosive=0; explosive<global.player.explosives; explosive+=1){
 			var explosive_inst = instance_create_layer(global.player.x, global.player.y, "Instances", oExplosive)

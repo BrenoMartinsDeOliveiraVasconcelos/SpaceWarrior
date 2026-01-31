@@ -1,5 +1,5 @@
 font = font_add_sprite_ext(fGamefont, "0123456789. -SHDAFEXR/", 0, global.text_sep)
-gofont = font_add_sprite_ext(fGameOver, ".", 0, 2)
+gofont = global.gofont
 draw_set_font(font)
 
 full_text = ""
@@ -25,7 +25,7 @@ full_text += "D"+string(round((global.player.def/global.max_def)*100)) + " "
 
 full_text += "A"+string(global.player.blast_damage) + " "
 full_text += "E" + string(global.enemy_kill_count)+ "/" + string(array_length(global.enemy_instances)) + " "
-full_text += "X" + string(array_length(global.explosives)) + " "
+full_text += "X" + string(global.alive_explosives) + " "
 full_text += "R" +string(global.horde)
 
 
@@ -33,11 +33,28 @@ full_text += "R" +string(global.horde)
 
 draw_text(first_x, first_y, full_text)
 
-if (global.player.hp <= 0){
+display.image_xscale = global.dialog_scalex
+display.image_yscale = global.dialog_scaley
 
+// Draw on enemy
+draw_set_halign(fa_center)
+for (var enemy=0; enemy<array_length(global.enemy_instances); enemy+=1){
+	var instance = global.enemy_instances[enemy]
+	
+	if instance_exists(instance){
+		var hp_text = "0"
+	
+		if (instance.hp > 0){
+			hp_text = string((instance.hp/instance.max_hp)*100)
+		}
+	
+		
+		draw_text(instance.x, instance.y - instance.sprite_height/2 - 30, hp_text)
+	}
+}
+draw_set_halign(fa_left)
+
+if (global.player.hp <= 0){
 	draw_set_font(gofont)
 	draw_text(global.player.x, global.player.y, ".")
 }
-
-display.image_xscale = global.dialog_scalex
-display.image_yscale = global.dialog_scaley

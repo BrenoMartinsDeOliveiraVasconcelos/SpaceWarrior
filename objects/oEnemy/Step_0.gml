@@ -1,5 +1,4 @@
 
-
 if (euclidian_distance(x, y, target_x, target_y) > 5){
 	speed = move_speed
 	var final_target_y = target_y
@@ -18,7 +17,13 @@ if (euclidian_distance(x, y, target_x, target_y) > 5){
 		blast_damage = og_blast_damage
 	}
 }else{
-	speed = 0
+	
+	if (!is_randomly_moving){
+		speed = 0
+	}else{
+		target_x = irandom_range(global.dialog_y_size, room_width)
+		target_y = irandom_range(global.dialog_y_size, room_height)
+	}
 }
 
 if (last_blast > frames_per_blast){

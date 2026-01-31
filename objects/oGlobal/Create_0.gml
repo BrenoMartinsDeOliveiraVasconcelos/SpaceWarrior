@@ -17,6 +17,7 @@ global.dialog_scalex = 31.25
 global.dialog_scaley = 2
 global.dialog_y_size = global.dialog_scaley*global.dialog_size
 global.max_def = 0.99
+global.gofont = font_add_sprite_ext(fGameOver, ".", 0, 2)
 
 global.star_amount =  64
 global.star_distance = 8
@@ -29,12 +30,14 @@ global.new_horde = true
 global.enemy_kill_count = 0
 global.spawn_multiplication_rate = 1.5
 global.enemy_max_y = 75
-global.frames_till_next = 1200
+global.frames_till_next = 600
 global.frames_remaining_next = 0
 global.orbs = 2
 global.orb_spawn_range = 100
 global.horde = 0
 global.enemy_distancing = 10
+global.alive_explosives = 0
+global.random_move_chance = 100  // between 0 and 1000. 155 would be equal to 15.5% chance.
 
 // Keys
 global.fullscreen_key = vk_f11
