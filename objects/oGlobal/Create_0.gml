@@ -34,7 +34,7 @@ global.frames_remaining_next = 0
 global.orbs = 2
 global.orb_spawn_range = 100
 global.horde = 0
-global.enemy_distancing = 40
+global.enemy_distancing = 10
 
 // Keys
 global.fullscreen_key = vk_f11

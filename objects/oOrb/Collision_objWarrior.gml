@@ -13,8 +13,8 @@ if (sprite_index == sHealthBoost){
 		other.frames_per_recover = 5
 	}
 	
-	if (other.hp_recover_rate > other.hp_max*0.9){
-		other.hp_recover_rate = other.hp_max * 0.9
+	if (other.hp_recover_rate > other.hp_max*0.5){
+		other.hp_recover_rate = other.hp_max * 0.5
 	}
 }
 
@@ -28,7 +28,7 @@ if (sprite_index == sBlastSpeed){
 }
 
 if (sprite_index == sMaxHP){
-	other.hp_max += (other.hp_max*0.5)
+	other.hp_max += (other.hp_max*0.25)
 	other.hp = other.hp_max
 }
 
