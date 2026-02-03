@@ -1,5 +1,8 @@
+image_xscale = 1.5
+image_yscale = 1.5
+
 mov_speed = 5  // quantity per frame
-frames_per_blast = 15
+frames_per_blast = 20
 last_blast = frames_per_blast
 
 hp = 100
@@ -14,9 +17,14 @@ blast_damage = 5
 impact = 250
 impacted_speed = 1
 explosives = 1
-number_shields = 10
+number_shields = 20
 shield_speed = 1
 shields = []
 shield_pos = 0
-shield_colision_damage = 2
+shield_colision_damage = 1
 shield_impulse = 50
+shield_current_durability = 0
+shield_max_durability = 0
+shooted = false
+cooldown_recover_shooted = 30
+shooted_cooldown = 0

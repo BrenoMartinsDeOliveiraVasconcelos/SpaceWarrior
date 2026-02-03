@@ -1,6 +1,6 @@
 // Movement and targeting logic
 var distance_to_target = point_distance(x, y, target_x, target_y)
-var move_to_target = distance_to_target > 5 or  impacted or  suffering_impulse
+var move_to_target = distance_to_target >= 5 or  impacted or  suffering_impulse
 
 if (move_to_target) {
 	speed = move_speed
@@ -20,6 +20,7 @@ if (move_to_target) {
     if (suffering_impulse) {
         impacted_walk_dist += move_speed
         var remaining_dist = global.player.shield_impulse - impacted_walk_dist
+		current_speed = global.player.mov_speed
         
         var impulse_pos = get_xy_angle(
             impulse_x, 
@@ -53,6 +54,7 @@ else {
         speed = 0
     } else {
         // Set random movement target
+		speed = move_speed
         target_x = irandom_range(global.dialog_y_size, room_width)
         target_y = irandom_range(global.dialog_y_size, room_height)
     }
@@ -73,6 +75,7 @@ if (can_fire) {
 // Update cooldowns
 shield_damage_cooldown -= 1
 last_blast += 1
+explosion_damage_cooldown -= 1
 
 // Grant no out-of-bounds position
 if (x < 0 or x > room_width or y < global.dialog_y_size or y > room_height){
@@ -80,4 +83,11 @@ if (x < 0 or x > room_width or y < global.dialog_y_size or y > room_height){
 			target_x = irandom_range(global.dialog_y_size, room_width)
 			target_y = irandom_range(global.dialog_y_size, room_height)
 		}
+}
+
+// On death
+if (hp<=0){
+	global.enemy_kill_count += 1
+	instance_create_layer(x, y, "Instances", oExplosion)
+	instance_destroy(self)
 }

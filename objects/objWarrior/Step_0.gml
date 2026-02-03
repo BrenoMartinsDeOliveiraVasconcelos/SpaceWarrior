@@ -23,12 +23,21 @@ if (keyboard_check(global.blast_key)){
 }
 
 // HP recover
-if (last_recover >= frames_per_recover && hp < hp_max){
+if (last_recover >= frames_per_recover && hp < hp_max && !shooted){
 	last_recover = 0
 	hp += hp_recover_rate
 	
 	if (hp > hp_max){
 		hp = hp_max
+	}
+}
+
+if (shooted){
+	shooted_cooldown += 1
+	
+	if (shooted_cooldown > cooldown_recover_shooted){
+		shooted = false
+		shooted_cooldown = 0
 	}
 }
 
@@ -59,8 +68,14 @@ if (hp <= 0){
 }
 
 if  (array_length(shields) < number_shields){
+	shield_pos = 0
 	for (shield_num = 0; shield_num < array_length(shields); shield_num+=1){
-		shields[shield_num].angulation = shield_num
+		shields[shield_num].angulation = shield_pos
+		
+		shield_pos += 1
+		if (shield_pos > 360){
+			shield_pos = 0
+		}
 	}
 	
 	while  (array_length(shields) < number_shields){
@@ -70,5 +85,20 @@ if  (array_length(shields) < number_shields){
 		array_push(shields, shield)
 	
 		shield_pos += 1
+		
+		if (shield_pos > 360){
+			shield_pos = 0
+		}
+	}
+}
+
+// Count shield
+if (array_length(shields) > 0){
+	shield_current_durability = 0
+	shield_max_durability = 0
+	for (shield_num = 0; shield_num < array_length(shields); shield_num+=1){
+		shield_inst = shields[shield_num]
+		shield_current_durability += shield_inst.durability
+		shield_max_durability += shield_inst.max_durability
 	}
 }

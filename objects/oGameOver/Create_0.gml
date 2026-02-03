@@ -1,0 +1,1 @@
+game_reset_key = ord("R")

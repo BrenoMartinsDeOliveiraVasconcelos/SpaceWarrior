@@ -5,3 +5,4 @@ image_xscale = 2
 image_yscale = 2
 rotation_speed = 1
 image_angle = irandom_range(0, 360)
+damage = 40

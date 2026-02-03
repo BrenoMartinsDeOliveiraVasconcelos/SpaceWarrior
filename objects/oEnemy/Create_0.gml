@@ -1,4 +1,7 @@
-max_hp = 20+((global.horde-1)*1.5)
+image_xscale = 1.5
+image_yscale = 1.5
+
+max_hp = 20+((global.horde-1)*10)
 hp = max_hp
 frames_per_blast = 120 - ((global.horde-1) * 2)
 
@@ -23,6 +26,8 @@ target_y = 0
 og_target_y = 0
 is_randomly_moving = false
 shield_damage_cooldown = 0
-max_shield_damage_cooldown = 30
+max_shield_damage_cooldown = 60
+explosion_damage_max_cool = 120
+explosion_damage_cooldown = 0
 
 

@@ -1,15 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oEnemy",
+  "%Name":"oGameOver",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oBlast","path":"objects/oBlast/oBlast.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oShield","path":"objects/oShield/oShield.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oExplosion","path":"objects/oExplosion/oExplosion.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oEnemy",
+  "name":"oGameOver",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -34,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sEnemy",
-    "path":"sprites/sEnemy/sEnemy.yy",
+    "name":"fGameOver",
+    "path":"sprites/fGameOver/fGameOver.yy",
   },
   "spriteMaskId":null,
   "visible":true,

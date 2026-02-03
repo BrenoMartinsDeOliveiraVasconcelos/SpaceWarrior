@@ -1,5 +1,4 @@
-font = font_add_sprite_ext(fGamefont, "0123456789. -SHDAFEXR/+", 0, global.text_sep)
-gofont = global.gofont
+font = font_add_sprite_ext(fGamefont, "0123456789. -SHDAFEXR/+P", 0, global.text_sep)
 draw_set_font(font)
 
 full_text = ""
@@ -16,16 +15,16 @@ full_text += "S"+zfilled_number(global.number_zeroes , global.player.gamescore) 
 var player_hp = 0
 
 if (global.player.hp > 0){
-	player_hp = round((global.player.hp/global.player.hp_max)*100)
+	player_hp = ((global.player.hp/global.player.hp_max)*100)
 }
 
-full_text += "H"+string(player_hp) + "+" + string((global.player.hp_recover_rate/global.player.hp_max)*100) + " "
+full_text += "H"+string(player_hp) + " "
 
 full_text += "D"+string(round((global.player.def/global.max_def)*100)) + " " 
 
 full_text += "A"+string(global.player.blast_damage) + " "
+full_text += "P"+ string(global.player.shield_current_durability) + "/" + string(global.player.shield_max_durability) + " "
 full_text += "E" + string(global.enemy_kill_count)+ "/" + string(array_length(global.enemy_instances)) + " "
-full_text += "X" + string(global.alive_explosives) + " "
 full_text += "R" +string(global.horde)
 
 
@@ -51,8 +50,3 @@ for (var enemy=0; enemy<array_length(global.enemy_instances); enemy+=1){
 	}
 }
 draw_set_halign(fa_left)
-
-if (global.player.hp <= 0){
-	draw_set_font(gofont)
-	draw_text(global.player.x, global.player.y, ".")
-}
